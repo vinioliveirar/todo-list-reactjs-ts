@@ -1,0 +1,40 @@
+.listTaks {
+  display: grid;
+  flex-direction: row;
+  width: 100%;
+  gap: 12px;
+}
+
+.listTaks li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  gap: 12px;
+
+  height: 72px;
+
+  background: var(--gray-500);
+
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+.listTaks li label {
+  color: var(--white);
+  width: 90%;
+}
+
+.listTaks button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+
+  line-height: 0;
+  border-radius: 2px;
+}
+.listTaks button:hover {
+  color: var(--danger);
+}

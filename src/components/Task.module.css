@@ -1,0 +1,82 @@
+.input {
+  max-width: 736px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+}
+.input > input {
+  width: 39.875rem;
+  height: 3.375rem;
+  padding: 1rem;
+  gap: 8px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  color: var(--white);
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.input > button {
+  width: 5.625rem;
+  height: 3.25rem;
+
+  background: var(--blue-dark);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.contentBox {
+  margin-top: 4rem;
+  width: 736px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.created {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.done {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.counter {
+  color: var(--gray-200);
+  background: var(--gray-400);
+  font-weight: 700;
+  font-size: 12px;
+
+  width: 25px;
+  height: 19px;
+  border-radius: 999px;
+
+  padding: 2px 8px;
+}
+
+.contentTasks {
+  display: grid;
+}
