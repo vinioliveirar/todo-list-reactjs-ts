@@ -1,15 +1,21 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, HtmlHTMLAttributes, useState } from "react";
+import { v4 } from "uuid";
 import { ListTaks } from "./ListTask";
 import styles from "./Task.module.css";
 
+export interface Task {
+  id: string;
+  content: string;
+}
+
 export function Task() {
-  const [tasks, setTaks] = useState(["isso é uma task"]);
+  const [tasks, setTaks] = useState<Task[]>([]);
 
   const [newTaskText, setNewTaskText] = useState("");
 
   function handleCreateNewTaks(event: FormEvent) {
     event.preventDefault();
-    setTaks([...tasks, newTaskText]);
+    setTaks([...tasks, { id: v4(), content: newTaskText }]);
     setNewTaskText("");
   }
 
@@ -18,9 +24,16 @@ export function Task() {
     setNewTaskText(event.target.value);
   }
 
+  function deleteTask(taskToDelete: string) {
+    const tasksWithoutDeletedOne = tasks.filter((task) => {
+      return task.content !== taskToDelete;
+    });
+    setTaks(tasksWithoutDeletedOne);
+  }
+
   return (
-    <div>
-      <div>
+    <div className={styles.content}>
+      <div className="input">
         <form onSubmit={handleCreateNewTaks} className={styles.input}>
           <input
             type="text"
@@ -35,15 +48,18 @@ export function Task() {
       <div className={styles.contentBox}>
         <header className={styles.taskHeader}>
           <p className={styles.created}>
-            Tarefas criadas <span className={styles.counter}>0</span>
+            Tarefas criadas{" "}
+            <span className={styles.counter}>{tasks.length}</span>
           </p>
           <p className={styles.done}>
-            Concluidas <span className={styles.counter}>0</span>
+            Concluidas <span className={styles.counter}></span>
           </p>
         </header>
         <section className={styles.contentListTask}>
           {tasks.map((task) => {
-            return <ListTaks content={task} />;
+            return (
+              <ListTaks key={task.id} task={task} onDeleteTask={deleteTask} />
+            );
           })}
         </section>
       </div>

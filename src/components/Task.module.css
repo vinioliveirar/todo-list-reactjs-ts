@@ -1,6 +1,9 @@
-.input {
-  max-width: 736px;
+.content {
+  width: 100%;
+}
 
+.input {
+  margin-top: -60px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,8 +11,6 @@
   gap: 8px;
 }
 .input > input {
-  width: 39.875rem;
-  height: 3.375rem;
   padding: 1rem;
   gap: 8px;
   background: var(--gray-500);
@@ -38,7 +39,6 @@
 
 .contentBox {
   margin-top: 4rem;
-  width: 736px;
 
   display: flex;
   flex-direction: column;
