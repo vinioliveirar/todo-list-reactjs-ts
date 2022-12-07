@@ -1,7 +1,20 @@
 .content {
   width: 100%;
 }
+.noTasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+  padding: 2rem;
+}
+.noTasks img {
+  padding: 0.75rem 0;
+}
+.noTasks p {
+  color: var(--gray-300);
+}
 .input {
   margin-top: -60px;
   display: flex;
