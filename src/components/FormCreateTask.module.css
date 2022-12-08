@@ -1,22 +1,20 @@
 .input {
   margin-top: -60px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0px;
   gap: 8px;
 }
 .input > input {
   padding: 1rem;
-  gap: 8px;
   background: var(--gray-500);
   border: 1px solid var(--gray-700);
   border-radius: 8px;
-  color: var(--white);
 
-  flex: none;
-  order: 0;
   flex-grow: 1;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
 }
 
 .input > button {
@@ -32,4 +30,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
 }

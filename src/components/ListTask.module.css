@@ -22,24 +22,25 @@
 .task {
   color: var(--white);
   width: 90%;
+  padding: 0 0.75rem;
   cursor: pointer;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-
-  padding: 0 0.75rem;
 }
 .taskCheck {
   color: var(--gray-300);
   width: 90%;
+  padding: 0 0.75rem;
   cursor: pointer;
+
   text-decoration: line-through;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   opacity: 0.5;
-  padding: 0 0.75rem;
 }
 
 .trash {
@@ -47,7 +48,6 @@
   border: 0;
   color: var(--gray-300);
   cursor: pointer;
-
   line-height: 0;
   border-radius: 2px;
 }
