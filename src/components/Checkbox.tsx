@@ -1,4 +1,4 @@
-import { CheckCircle, Circle } from "phosphor-react";
+import { Check, CheckCircle, Circle } from "phosphor-react";
 import { ButtonHTMLAttributes } from "react";
 
 import styles from "./Checkbox.module.css";
@@ -14,7 +14,7 @@ export function Checkbox({ checked, ...props }: CheckboxProps) {
         </button>
       ) : (
         <button className={styles.checkboxChecked} {...props}>
-          <CheckCircle size={24} />
+          <Check size={24} />
         </button>
       )}
     </>

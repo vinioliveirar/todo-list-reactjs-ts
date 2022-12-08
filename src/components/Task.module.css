@@ -1,7 +1,7 @@
 .content {
   width: 100%;
 }
-.noTasks {
+.empty {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,10 +9,10 @@
 
   padding: 2rem;
 }
-.noTasks img {
+.empty img {
   padding: 0.75rem 0;
 }
-.noTasks p {
+.empty p {
   color: var(--gray-300);
 }
 .input {
