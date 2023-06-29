@@ -8,11 +8,9 @@
 .listTaks li {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding: 1rem;
-
-  height: 4.5rem;
 
   background: var(--gray-500);
 
@@ -20,68 +18,39 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
 }
-.checkbox[type="checkbox"] {
-  position: relative;
-  width: 1.5em;
-  height: 1.5em;
-  border: 1px solid var(--blue);
-  border-radius: 999px;
-  appearance: none;
-  outline: 0;
-  cursor: pointer;
-  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
-}
 
-.checkbox[type="checkbox"]:checked {
-  color: var(--white);
-  background: var(--purple);
-  border-color: var(--purple);
-}
-input[type="checkbox"]::before {
-  position: absolute;
-  content: "";
-  display: block;
-  top: 2px;
-  left: 7px;
-  width: 8px;
-  height: 14px;
-  border-style: solid;
-  border-color: #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  opacity: 0;
-}
-.checkbox[type="checkbox"]:checked::before {
-  opacity: 1;
-}
-
-.listTaks li label {
-  color: var(--white);
-  width: 90%;
-}
 .task {
   color: var(--white);
   width: 90%;
+  padding: 0 0.75rem;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
 }
-.task::before {
-  content: attr(data-content);
-  color: gray;
-  clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+.taskCheck {
+  color: var(--gray-300);
+  width: 90%;
+  padding: 0 0.75rem;
+  cursor: pointer;
+
   text-decoration: line-through;
-  text-decoration-thickness: 3px;
-  text-decoration-color: black;
-  transition: clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
 }
 
-.listTaks button {
+.trash {
   background: transparent;
   border: 0;
   color: var(--gray-300);
   cursor: pointer;
-
   line-height: 0;
   border-radius: 2px;
 }
-.listTaks button:hover {
+.trash:hover {
   color: var(--danger);
 }

@@ -1,40 +1,18 @@
 .content {
   width: 100%;
 }
-
-.input {
-  margin-top: -60px;
+.empty {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0px;
-  gap: 8px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
 }
-.input > input {
-  padding: 1rem;
-  gap: 8px;
-  background: var(--gray-500);
-  border: 1px solid var(--gray-700);
-  border-radius: 8px;
-  color: var(--white);
-
-  flex: none;
-  order: 0;
-  flex-grow: 1;
+.empty img {
+  padding: 0.75rem 0;
 }
-
-.input > button {
-  width: 5.625rem;
-  height: 3.25rem;
-
-  background: var(--blue-dark);
-  border-radius: 8px;
-  border: none;
-  color: var(--white);
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+.empty p {
+  color: var(--gray-300);
 }
 
 .contentBox {

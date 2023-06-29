@@ -1,0 +1,38 @@
+.input {
+  margin-top: -60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.input > input {
+  padding: 1rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  color: var(--white);
+
+  flex-grow: 1;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.input > button {
+  width: 5.625rem;
+  height: 3.25rem;
+  gap: 5px;
+
+  background: var(--blue-dark);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+}

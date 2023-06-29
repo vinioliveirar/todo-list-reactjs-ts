@@ -1,0 +1,25 @@
+.checkbox {
+  background: transparent;
+  border: none;
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.checkbox svg {
+  color: var(--blue);
+}
+
+.checkboxChecked {
+  background: transparent;
+  border: none;
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: var(--purple);
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.checkboxChecked svg {
+  color: var(--white);
+}
